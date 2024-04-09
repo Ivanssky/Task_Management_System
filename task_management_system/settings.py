@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'task_management_system.tag',
     'task_management_system.project',
     'task_management_system.recurrence',
+    'task_management_system.user',
     'task_management_system.comment'
 ]
 
