@@ -21,3 +21,10 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['image', 'username', 'email', 'first_name', 'last_name', 'age']
+
+
+class ProfileEditForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = ['image', 'username', 'email', 'age']

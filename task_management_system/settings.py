@@ -136,3 +136,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'task_management_system/static/images')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'user.User'
+
+LOGIN_REDIRECT_URL = 'main page'
+LOGOUT_REDIRECT_URL = 'main page'

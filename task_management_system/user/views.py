@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.views.generic import FormView, DetailView
+from django.views.generic import FormView, DetailView, UpdateView
 from django.urls import reverse_lazy
-from .forms import LoginForm, RegisterForm, ProfileForm
+from .forms import LoginForm, RegisterForm, ProfileForm, ProfileEditForm
 from .models import User
 
 
@@ -45,6 +45,16 @@ class ProfileView(DetailView):
     model = User
     form_class = ProfileForm
     template_name = 'users/profile.html'
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
+
+class ProfileEditView(UpdateView):
+    model = User
+    form_class = ProfileEditForm
+    template_name = 'users/edit_profile.html'
+    success_url = 'profile'
 
     def get_object(self, queryset=None):
         return self.request.user
