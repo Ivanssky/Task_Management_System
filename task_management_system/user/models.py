@@ -66,10 +66,15 @@ class User(AbstractBaseUser):
         null=True
     )
 
+    image = models.ImageField(
+        default='no pic.jpg',
+        upload_to='user_images'
+    )
+
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'email', 'age']
+    REQUIRED_FIELDS = ['username', 'age']
 
     class Meta:
         verbose_name = 'User'

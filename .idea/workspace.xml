@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6e2627b-fb49-4765-bd2b-0c389a50c8d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task_management_system/comment/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/project/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/recurrence/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/tag/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/task/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/user/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_management_system/static/images/no pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_management_system/user/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_management_system/user/migrations/0002_user_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/users/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/users/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a333100f-e9c3-4e42-b425-d558afea2f36/storage_v2/_src_/database/Task_Management_System.kTUakA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a333100f-e9c3-4e42-b425-d558afea2f36/storage_v2/_src_/database/Task_Management_System.kTUakA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_management_system/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_management_system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -55,14 +54,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "Django Server.task_management_system.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Majes/PycharmProProjects/task_management_system/task_management_system/comment",
+    "last_opened_file_path": "C:/Users/Majes/PycharmProProjects/task_management_system/task_management_system/static/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,11 +79,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\static\images" />
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\comment" />
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\project" />
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\recurrence" />
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\tag" />
-      <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\task" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system" />
@@ -131,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712677694222</updated>
       <workItem from="1712677737301" duration="227000" />
-      <workItem from="1712677977747" duration="16133000" />
+      <workItem from="1712677977747" duration="25952000" />
     </task>
     <servers />
   </component>
