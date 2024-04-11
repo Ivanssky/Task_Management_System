@@ -21,7 +21,7 @@ from task_management_system.user import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.main_page, name='main page'),
+    path('', views.main_page, name='home'),
     path('', include('task_management_system.comment.urls')),
     path('', include('task_management_system.project.urls')),
     path('', include('task_management_system.recurrence.urls')),

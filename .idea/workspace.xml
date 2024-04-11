@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6e2627b-fb49-4765-bd2b-0c389a50c8d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/users/edit_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_management_system/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a333100f-e9c3-4e42-b425-d558afea2f36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a333100f-e9c3-4e42-b425-d558afea2f36.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_management_system/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_management_system/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_management_system/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_management_system/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +32,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -56,6 +64,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Majes/PycharmProProjects/task_management_system/task_management_system/static/images",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -125,6 +134,7 @@
       <updated>1712677694222</updated>
       <workItem from="1712677737301" duration="227000" />
       <workItem from="1712677977747" duration="30840000" />
+      <workItem from="1712847258391" duration="17570000" />
     </task>
     <servers />
   </component>

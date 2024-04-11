@@ -42,8 +42,17 @@ INSTALLED_APPS = [
     'task_management_system.project',
     'task_management_system.recurrence',
     'task_management_system.user',
-    'task_management_system.comment'
+    'task_management_system.comment',
+
+    'crispy_forms',
+    'crispy_bootstrap5'
+
+
+
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

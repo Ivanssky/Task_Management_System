@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.views.generic import FormView, DetailView, UpdateView
+from django.views.generic import FormView, DetailView, UpdateView, CreateView
 from django.urls import reverse_lazy
 from .forms import LoginForm, RegisterForm, ProfileForm, ProfileEditForm
 from .models import User
@@ -16,24 +16,22 @@ class LoginView(FormView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
-
-        username = form.cleaned_data['username']
+        email = form.cleaned_data['email']
         password = form.cleaned_data['password']
-        user = authenticate(self.request, username=username, password=password)
+        user = authenticate(self.request, email=email, password=password)
 
         if user is not None:
             login(self.request, user)
             return super().form_valid(form)
-
         else:
-            form.add_error(None, "Invalid username or password")
+            form.add_error(None, "Invalid email or password")
             return self.form_invalid(form)
 
 
-class RegisterView(FormView):
+class RegisterView(CreateView):
     template_name = 'users/registration.html'
     form_class = RegisterForm
-    success_url = 'home'
+    success_url = reverse_lazy('home')
 
     def form_valid(self, form):
         user = form.save()
@@ -63,3 +61,7 @@ class ProfileEditView(UpdateView):
 def logout_view(request):
     logout(request)
     return redirect("home")
+
+
+def about_view(request):
+    return render(request, 'about.html')
