@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6e2627b-fb49-4765-bd2b-0c389a50c8d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task_management_system/static/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a333100f-e9c3-4e42-b425-d558afea2f36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a333100f-e9c3-4e42-b425-d558afea2f36.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/registration.html" afterDir="false" />
-    </list>
+    <list default="true" id="d6e2627b-fb49-4765-bd2b-0c389a50c8d6" name="Changes" comment="Stuff" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,33 +37,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.task_management_system.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Majes/PycharmProProjects/task_management_system/task_management_system/static/images",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.task_management_system.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ivan/PycharmProjects/task_management_system&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\static\images" />
@@ -87,6 +74,7 @@
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system\tag" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ivan\PycharmProjects\task_management_system-master\task_management_system\static\images" />
       <recent name="C:\Users\Majes\PycharmProProjects\task_management_system\task_management_system" />
     </key>
   </component>
@@ -120,7 +108,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -135,6 +124,12 @@
       <workItem from="1712677737301" duration="227000" />
       <workItem from="1712677977747" duration="30840000" />
       <workItem from="1712847258391" duration="17570000" />
+      <workItem from="1712937509675" duration="348000" />
+      <workItem from="1712938677715" duration="702000" />
+      <workItem from="1712939421440" duration="2456000" />
+      <workItem from="1712942087506" duration="5159000" />
+      <workItem from="1712948056975" duration="30000" />
+      <workItem from="1712948970307" duration="45000" />
     </task>
     <servers />
   </component>
@@ -143,5 +138,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
 </project>

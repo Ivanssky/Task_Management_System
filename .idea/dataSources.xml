@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Task_Management_System" uuid="a333100f-e9c3-4e42-b425-d558afea2f36">
+    <data-source source="LOCAL" name="Taskify" uuid="225d9714-d564-4246-ac4d-90c18afc488a">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

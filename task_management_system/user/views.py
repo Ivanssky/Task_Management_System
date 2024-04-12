@@ -47,6 +47,18 @@ class ProfileView(DetailView):
     def get_object(self, queryset=None):
         return self.request.user
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        current_user = self.request.user
+        users_profile_pk = self.kwargs.get('pk')
+
+        current_profile = User.objects.get(pk=users_profile_pk)
+
+        context['current_user'] = current_user
+        context['current_profile'] = current_profile
+        return context
+
 
 class ProfileEditView(UpdateView):
     model = User
