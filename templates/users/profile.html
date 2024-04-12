@@ -4,12 +4,12 @@
 <div class="container">
     <div class="row justify-content-center mt-5">
         <div class="col-md-6 d-flex justify-content-center">
-            <div class="card mb-3 border-3" style="width: 220px; max-width: 100%;">
+            <div class="card border-2 border-dark" style="width: 300px; background-color: #f8f9fa; /* Set background color */">
                 <div class="card-body">
-                    <div class="d-flex align-items-center mb-3 justify-content-center">
-                        <img src="{{ current_profile.image.url }}" style="object-fit: cover; width: 90px; height: 90px;" class="profile-picture rounded-circle">
+                    <div class="d-flex justify-content-center">
+                        <img src="{{ current_profile.image.url }}" style="object-fit: cover; width: 120px; height: 120px;" class="profile-picture rounded-circle">
                     </div>
-                    <div class="mb-3">
+                    <div class="mt-3">
                         <h5 class="card-title text-center">{{ current_profile.username }}</h5>
                         <p class="card-text text-center">{{ current_profile.email }}</p>
                         {% if current_user == current_profile %}
@@ -23,14 +23,18 @@
                         {% endif %}
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center mt-3">
-        <div class="col-md-6 d-flex justify-content-center" style="width: 220px;">
-            <div class="d-flex justify-content-between" style="width: 100%;">
-                <button class="btn btn-primary me-2" style="width: 48%;">Edit</button>
-                <button class="btn btn-danger" style="width: 48%;">Delete</button>
+            {% if current_user.pk == current_profile.pk %}
+                <div class="card-footer border-0 bg-transparent">
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <a class = 'btn btn-outline-dark w-100' href = '{% url 'edit profile' pk=current_user.pk %}'>Edit</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="btn btn-outline-dark w-100" href='{% url 'delete profile' pk=current_user.pk %}'>Delete</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
             </div>
         </div>
     </div>

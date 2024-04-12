@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>home.html</h1>
+    {{ request.user.is_authenticated }}
 
 {% endblock %}

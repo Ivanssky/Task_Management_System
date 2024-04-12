@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Delete Profile</h1>
+
+                <p class="card-text text-center">Are you sure you want to delete your profile?</p>
+
+                <form method="post" action="{% url 'delete profile' pk=user.pk %}">
+                    {% csrf_token %}
+                    {{ form }}
+                    <div class="row justify-content-center">
+
+                    <button type="submit" class="btn btn-outline-dark w-25 me-5">Delete</button>
+                    <a href="{% url 'profile' pk=user.pk %}" class="btn btn-outline-dark w-25">Cancel</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

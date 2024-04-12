@@ -17,8 +17,7 @@ footer {
 /*background*/
 
 body {
-    background-image: url('task_management_system/static/images/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

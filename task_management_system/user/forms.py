@@ -16,6 +16,7 @@ class RegisterForm(UserCreationForm):
         self.fields['first_name'].widget.attrs['placeholder'] = 'First Name'
         self.fields['last_name'].widget.attrs['placeholder'] = 'Last Name'
 
+
         self.fields['username'].label = ''
         self.fields['email'].label = ''
         self.fields['password1'].label = ''
@@ -23,12 +24,14 @@ class RegisterForm(UserCreationForm):
         self.fields['age'].label = ''
         self.fields['first_name'].label = ''
         self.fields['last_name'].label = ''
+        self.fields['image'].label = ''
+
 
         self.help_texts = {}
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2', 'age', 'first_name', 'last_name']
+        fields = ['username', 'email', 'password1', 'password2', 'age', 'first_name', 'last_name', 'image']
 
         error_messages = {
             'password2': {
@@ -67,3 +70,7 @@ class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['image', 'username', 'email', 'age']
+
+
+class DeleteProfileForm(forms.Form):
+    confirm_delete = forms.BooleanField(label='Confirm', required=True)

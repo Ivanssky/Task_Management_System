@@ -1,6 +1,7 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.views.generic import FormView, DetailView, UpdateView, CreateView
+from django.views.generic import FormView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
 from .forms import LoginForm, RegisterForm, ProfileForm, ProfileEditForm
 from .models import User
@@ -36,7 +37,7 @@ class RegisterView(CreateView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        return super().form_valid(form)
+        return redirect('home')
 
 
 class ProfileView(DetailView):
@@ -69,6 +70,9 @@ class ProfileEditView(UpdateView):
     def get_object(self, queryset=None):
         return self.request.user
 
+    def get_success_url(self):
+        return reverse_lazy('profile', kwargs={'pk': self.object.pk})
+
 
 def logout_view(request):
     logout(request)
@@ -77,3 +81,24 @@ def logout_view(request):
 
 def about_view(request):
     return render(request, 'about.html')
+
+
+def user_search(request):
+    search_query = request.GET.get('q')
+    users = User.objects.none()
+    if search_query:
+        users = User.objects.filter(username__icontains=search_query)
+    return render(request, 'search_results.html', {'users': users, 'query': search_query})
+
+
+class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = User
+    success_url = reverse_lazy('home')
+    template_name = 'users/delete_profile.html'
+
+    def test_func(self):
+        return self.request.user.is_staff or self.request.user.pk == self.kwargs.get('pk')
+
+
+
+

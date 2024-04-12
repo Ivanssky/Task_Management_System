@@ -68,7 +68,8 @@ class User(AbstractBaseUser):
 
     image = models.ImageField(
         default='no pic.jpg',
-        upload_to='user_images'
+        upload_to='user_images',
+
     )
 
     objects = UserManager()
