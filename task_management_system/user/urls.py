@@ -1,5 +1,6 @@
 from django.urls import path, include
-from task_management_system.user.views import LoginView, RegisterView, ProfileView, logout_view, ProfileEditView, about_view
+from task_management_system.user.views import LoginView, RegisterView, ProfileView, logout_view, ProfileEditView, \
+    about_view
 
 urlpatterns = [
     path('about/', about_view, name='about'),
