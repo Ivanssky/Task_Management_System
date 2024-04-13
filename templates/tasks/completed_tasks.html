@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="text-align:center; margin-top: 20px;">
+  <a class="btn btn-outline-dark" href="{% url 'create task' %}">Create Task</a>
+  <a class="btn btn-outline-dark" href="{% url 'tasks' %}">My Tasks</a>
+  <a class="btn btn-outline-dark" href="{% url 'completed tasks' %}">Completed Tasks</a>
+</div>
+    <br>
+    <h1 class="text-center">Completed Tasks:</h1>
+{% for task in completed_tasks %}
+    <div>
+        <p>{{ task.title }}</p>
+        <form action="{% url 'restore task' task.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Restore</button>
+        </form>
+        <form action="{% url 'delete task' task.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+{% endfor %}
+{% endblock %}

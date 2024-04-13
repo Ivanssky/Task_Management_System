@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div style="text-align:center; margin-top: 20px;">
+  <a class="btn btn-outline-dark" href="{% url 'create task' %}">Create Task</a>
+  <a class="btn btn-outline-dark" href="{% url 'tasks' %}">My Tasks</a>
+  <a class="btn btn-outline-dark" href="{% url 'completed tasks' %}">Completed Tasks</a>
+</div>
+    <br>
+    <h1 class="text-center">Current Tasks:</h1>
     <div class = "container row">
     {% for task in tasks %}
     <div class="container">
@@ -11,7 +18,7 @@
                         <h3 class="card-title text-center">{{ task.title }}</h3>
                         <p class="card-text text-center">Description: {{ task.description|truncatechars:100}}</p>
                         <a class="btn btn-outline-dark w-100" style="margin-bottom: 10px;" href="{% url 'edit task' pk=task.pk %}">Edit</a>
-                        <a class="btn btn-outline-dark w-100" href="{% url 'tasks' %}">Complete</a>
+                        <a class="btn btn-outline-dark w-100" href="{% url 'complete task' task.id %}">Complete</a>
                     </div>
                 </div>
             </div>

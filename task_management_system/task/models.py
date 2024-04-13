@@ -26,6 +26,7 @@ class Task(models.Model):
     created_at = models.DateTimeField(
         default=datetime.now()
     )
+    completed = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
