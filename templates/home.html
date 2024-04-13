@@ -1,6 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>home.html</h1>
-    {{ request.user.is_authenticated }}
+    {% if request.user.is_authenticated %}
+<div style="text-align:center; margin-top: 20px;">
+  <a class="btn btn-outline-dark" href="{% url 'create task' %}">Create Task</a>
+  <a class="btn btn-outline-dark" href="{% url 'tasks' %}">My Tasks</a>
+  <a class="btn btn-outline-dark" href="#">Completed Tasks</a>
+</div>
+    {% endif %}
+<div style="text-align:center; margin-top: 50px;">
+    {% if last_3_tasks|length > 0 %}
+    <h2>Three Most Current Tasks:</h2>
+{% endif %}
+    {% for task in last_3_tasks %}
 
+    <ul type = 'none'>
+    <div class="container ">
+    <div class="row justify-content-center">
+        <div class="col-md-4 card border-2 border-dark">
+            
+                {% csrf_token %}
+                <li>{{ task }}</li>
+
+        </div>
+    </div>
+    </div>
+        
+    </ul>
+{% empty %}
+    <p>You do not have any tasks yet</p>
+  {% endfor %}
+</div>
 {% endblock %}

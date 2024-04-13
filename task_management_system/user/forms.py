@@ -16,7 +16,6 @@ class RegisterForm(UserCreationForm):
         self.fields['first_name'].widget.attrs['placeholder'] = 'First Name'
         self.fields['last_name'].widget.attrs['placeholder'] = 'Last Name'
 
-
         self.fields['username'].label = ''
         self.fields['email'].label = ''
         self.fields['password1'].label = ''
@@ -25,7 +24,6 @@ class RegisterForm(UserCreationForm):
         self.fields['first_name'].label = ''
         self.fields['last_name'].label = ''
         self.fields['image'].label = ''
-
 
         self.help_texts = {}
 
@@ -59,6 +57,7 @@ class LoginForm(forms.Form):
     class Meta:
         model = User
         fields = ['email', 'password']
+
 
 class ProfileForm(forms.ModelForm):
     class Meta:

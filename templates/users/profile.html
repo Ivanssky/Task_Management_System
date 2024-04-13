@@ -15,10 +15,10 @@
                         {% if current_user == current_profile %}
                             <p class="card-text text-center">Age: {{ current_profile.age }}</p>
                             {% if current_profile.first_name %}
-                                <p class="card-text text-center">First Name: {{ current_profile.first_name }}</p>
+                                <p class="card-text text-center">{{ current_profile.first_name }}</p>
                             {% endif %}
                             {% if current_profile.last_name %}
-                                <p class="card-text text-center">Last Name: {{ current_profile.last_name }}</p>
+                                <p class="card-text text-center">{{ current_profile.last_name }}</p>
                             {% endif %}
                         {% endif %}
                     </div>
