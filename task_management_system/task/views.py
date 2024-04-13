@@ -33,9 +33,10 @@ class HomeView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        all_tasks = Task.objects.filter(completed=False, user=self.request.user)
-        last_3_tasks = all_tasks.order_by('created_at')[:3]
-        context['last_3_tasks'] = last_3_tasks
+        if self.request.user.is_authenticated:
+            all_tasks = Task.objects.filter(completed=False, user=self.request.user)
+            last_3_tasks = all_tasks.order_by('created_at')[:3]
+            context['last_3_tasks'] = last_3_tasks
         return context
 
 

@@ -6,7 +6,7 @@
   <a class="btn btn-outline-dark" href="{% url 'tasks' %}">My Tasks</a>
   <a class="btn btn-outline-dark" href="{% url 'completed tasks' %}">Completed Tasks</a>
 </div>
-    {% endif %}
+
 <div style="text-align:center; margin-top: 50px;" class ='container row'>
     {% if last_3_tasks|length > 0 %}
     <h2>Recent Tasks:</h2>
@@ -37,5 +37,21 @@
 {% empty %}
     <p>You do not have any tasks yet</p>
   {% endfor %}
+
 </div>
+    {% else %}
+        <div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="card border-2 border-dark" style="width: 800px; background-color: #f8f9fa; /* Set background color */">
+                <div class="card-body">
+                    <div class="mt-3">
+    <h1 class="text-center">You need an account in order to create your first task!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    {% endif %}
 {% endblock %}
