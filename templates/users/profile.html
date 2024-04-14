@@ -35,7 +35,20 @@
                     </div>
                 </div>
             {% endif %}
+            {% if current_user.pk != current_profile.pk %}
+            <div class="card-footer border-0 bg-transparent">
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <a class = 'btn btn-outline-dark w-100' href = '#'>Add</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="btn btn-outline-dark w-100" href='#'>Tasks</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        {% endif %}
+        </div>
         </div>
     </div>
 </div>

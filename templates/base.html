@@ -43,6 +43,7 @@
         </div>
         {% else %}
         <div class="d-flex">
+            <a class="btn btn-outline-light me-2" href="#">My Contacts</a>
             <a class="btn btn-outline-light me-2" href="{% url 'profile' pk=request.user.pk %}">Profile</a>
             <a class="btn btn-outline-light" href="{% url 'logout' %}">Logout</a>
         </div>
