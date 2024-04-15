@@ -1,10 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-    <br>
-    <h1 class="text-center">{{ user_b }}'s Tasks:</h1>
+    <div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="card border-2 border-dark" style="width: 400px; background-color: #f8f9fa;">
+                <div class="card-body">
+                    <div class="mt-3">
+                        <h1 class="card-title text-center">{{ user_b }}'s Tasks:</h1>
+                        <div>
+                            <form method="get" class="sort-form" style="display: flex; align-items: flex-end;">
+                                <div>
+                                    {{ custom_filter_priority.form }}
+                                </div>
+                                <div>
+                                    {{ custom_filter_tag.form }}
+                                </div>
+                                <button type="submit" class="btn btn-outline-dark ml-2" style="height: 40px; min-width: 80px;">Sort</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container row">
         {% for task in user_tasks %}
-            <div class="container">
+            <div class="container" style="margin-bottom: 10px">
                 <div class="row justify-content-center mt-5">
                     <div class="col-md-6 d-flex justify-content-center">
                         <div class="card border-2 border-dark" style="width: 300px; background-color: #f8f9fa;">
@@ -12,6 +34,7 @@
                                 <div class="mt-3">
                                     <h3 class="card-title text-center">{{ task.title }}</h3>
                                     <p class="card-text text-center">{{ task.tag }}</p>
+                                    <p class="card-text text-center">{{ task.priority }}</p>
                                 </div>
                             </div>
                         </div>

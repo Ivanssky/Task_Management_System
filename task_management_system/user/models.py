@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 
+
 class UserManager(BaseUserManager):
     def create_user(self, email, username, age, password=None, **extra_fields):
         if not email:
@@ -28,19 +29,37 @@ class UserManager(BaseUserManager):
     def get_by_natural_key(self, email):
         return self.get(email=email)
 
+
 class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
 
-    username = models.CharField(max_length=150, unique=True)
-    email = models.EmailField(max_length=254, unique=True)
+    username = models.CharField(
+        max_length=150,
+        unique=True
+    )
+    email = models.EmailField(
+        max_length=254,
+        unique=True
+    )
     age = models.PositiveIntegerField()
 
-    first_name = models.CharField(max_length=30, blank=True, null=True)
-    last_name = models.CharField(max_length=30, blank=True, null=True)
+    first_name = models.CharField(
+        max_length=30,
+        blank=True,
+        null=True
+    )
+    last_name = models.CharField(
+        max_length=30,
+        blank=True,
+        null=True
+    )
 
-    image = models.ImageField(default='no pic.jpg', upload_to='user_images')
+    image = models.ImageField(
+        default='no pic.jpg',
+        upload_to='user_images'
+    )
 
     objects = UserManager()
 

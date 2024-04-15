@@ -6,6 +6,7 @@ from .forms import TaskForm
 from .models import Task
 import datetime
 
+from .utils import SortByPriority, SortByTag
 from ..user.models import User
 
 
@@ -17,6 +18,8 @@ def create_task(request):
             task.user = request.user
             tag_id = request.POST.get('tags')
             task.tag_id = tag_id
+            priority_id = request.POST.get('priority')
+            task.priority_id = priority_id
             task.created_at = datetime.datetime.now()
             task.save()
             return redirect('tasks')
@@ -28,7 +31,14 @@ def create_task(request):
 def tasks(request):
     if request.user.is_authenticated:
         user_tasks = Task.objects.filter(completed=False, user=request.user)
-        return render(request, 'tasks/my_tasks.html', {'tasks': user_tasks})
+        custom_filter_priority = SortByPriority(request.GET, queryset=user_tasks)
+        user_tasks = custom_filter_priority.qs
+        custom_filter_tag = SortByTag(request.GET, queryset=user_tasks)
+        user_tasks = custom_filter_tag.qs
+        context = {'tasks': user_tasks,
+                   'custom_filter_priority': custom_filter_priority,
+                   'custom_filter_tag': custom_filter_tag}
+        return render(request, 'tasks/my_tasks.html', context)
 
 
 class HomeView(ListView):
@@ -40,7 +50,7 @@ class HomeView(ListView):
         context = super().get_context_data(**kwargs)
         if self.request.user.is_authenticated:
             all_tasks = Task.objects.filter(completed=False, user=self.request.user)
-            last_3_tasks = all_tasks.order_by('created_at')[:3]
+            last_3_tasks = all_tasks.order_by('-created_at')[:3]
             context['last_3_tasks'] = last_3_tasks
         return context
 
@@ -99,6 +109,15 @@ def user_b_tasks(request, user_id):
     user_b_current_tasks = Task.objects.filter(user_id=user_id, visibility='PU')
     user_b = User.objects.get(pk=user_id)
 
+    custom_filter_priority = SortByPriority(request.GET, queryset=user_b_current_tasks)
+    user_b_current_tasks = custom_filter_priority.qs
+    custom_filter_tag = SortByTag(request.GET, queryset=user_b_current_tasks)
+    user_b_current_tasks = custom_filter_tag.qs
+
     context = {'user_b': user_b,
-               'user_tasks': user_b_current_tasks}
+               'user_tasks': user_b_current_tasks,
+               'tasks': user_b_current_tasks,
+               'custom_filter_priority': custom_filter_priority,
+               'custom_filter_tag': custom_filter_tag}
+
     return render(request, 'tasks/user_tasks.html', context)

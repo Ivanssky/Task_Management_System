@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'task_management_system.task',
     'task_management_system.tag',
-    'task_management_system.project',
-    'task_management_system.recurrence',
+    'task_management_system.priority',
     'task_management_system.user',
     'task_management_system.contacts',
 

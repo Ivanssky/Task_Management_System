@@ -20,6 +20,7 @@
                     <div class="mt-3">
                         <h3 class="card-title text-center">{{ task.title }}</h3>
                         <p class="card-text text-center">{{ task.tag}}</p>
+                        <p class="card-text text-center">{{ task.priority}}</p>
                         <a class="btn btn-outline-dark w-100" style="margin-bottom: 10px;" href="{% url 'edit task' pk=task.pk %}">Edit</a>
                          <form action="{% url 'complete task' task.id %}" method="post">
                             {% csrf_token %}
