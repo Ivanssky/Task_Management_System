@@ -6,6 +6,8 @@ from .forms import TaskForm
 from .models import Task
 import datetime
 
+from ..user.models import User
+
 
 def create_task(request):
     if request.method == 'POST':
@@ -91,3 +93,12 @@ class CompletedTaskView(ListView):
 
     def get_queryset(self):
         return Task.objects.filter(completed=True, user=self.request.user)
+
+
+def user_b_tasks(request, user_id):
+    user_b_current_tasks = Task.objects.filter(user_id=user_id, visibility='PU')
+    user_b = User.objects.get(pk=user_id)
+
+    context = {'user_b': user_b,
+               'user_tasks': user_b_current_tasks}
+    return render(request, 'tasks/user_tasks.html', context)

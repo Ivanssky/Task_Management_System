@@ -45,7 +45,7 @@
                                         {% endif %}
                                     </div>
                                     <div class="col-6">
-                                        <a class="btn btn-outline-dark w-100" href='#'>Tasks</a>
+                                        <a class="btn btn-outline-dark w-100" href="{% url 'user tasks' user_id=current_profile.pk %}">Tasks</a>
                                     </div>
                                 </div>
                             </div>

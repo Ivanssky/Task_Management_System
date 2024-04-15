@@ -6,12 +6,9 @@
   <a class="btn btn-outline-dark" href="{% url 'tasks' %}">My Tasks</a>
   <a class="btn btn-outline-dark" href="{% url 'completed tasks' %}">Completed Tasks</a>
 </div>
-    {% if request.user.is_staff %}
-        <h2>Hi</h2>
-        {% endif %}
 <div style="text-align:center; margin-top: 50px;" class ='container row'>
     {% if last_3_tasks|length > 0 %}
-    <h2>Recent Tasks</h2>
+    <h2>Recent Tasks:</h2>
 {% endif %}
     {% for task in last_3_tasks %}
 
