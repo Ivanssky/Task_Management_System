@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PY-241.14494.241">
-    <data-source name="Taskify" uuid="225d9714-d564-4246-ac4d-90c18afc488a">
+    <data-source name="appdb" uuid="b3400a5f-1bed-4e6a-b662-f7e34175a165">
       <database-info product="PostgreSQL" version="16.2" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="16.2" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>Taskify</user-name>
+      <user-name>admin</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="Taskify">
-            <node kind="schema" qname="public" />
+          <node kind="database" qname="appdb">
+            <node kind="schema">
+              <name qname="@" />
+              <name qname="information_schema" />
+              <name qname="pg_catalog" />
+              <name qname="public" />
+            </node>
           </node>
         </introspection-scope>
       </schema-mapping>

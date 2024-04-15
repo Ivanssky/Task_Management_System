@@ -12,7 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='home'),
     path('user/search/', user_search, name='user search'),
-    path('', include('task_management_system.comment.urls')),
+    path('', include('task_management_system.contacts.urls')),
     path('', include('task_management_system.project.urls')),
     path('', include('task_management_system.recurrence.urls')),
     path('', include('task_management_system.tag.urls')),

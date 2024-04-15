@@ -5,6 +5,7 @@ from django.views.generic import FormView, DetailView, UpdateView, CreateView, D
 from django.urls import reverse_lazy
 from .forms import LoginForm, RegisterForm, ProfileForm, ProfileEditForm
 from .models import User
+from ..contacts.models import Contact
 
 
 def main_page(request):
@@ -53,11 +54,17 @@ class ProfileView(DetailView):
 
         current_user = self.request.user
         users_profile_pk = self.kwargs.get('pk')
-
+        in_contacts = False
         current_profile = User.objects.get(pk=users_profile_pk)
+        if current_user.pk != current_profile.pk:
+
+            if Contact.objects.filter(user_a=current_user, user_b=current_profile).exists():
+                in_contacts = True
+
 
         context['current_user'] = current_user
         context['current_profile'] = current_profile
+        context['in_contacts'] = in_contacts
         return context
 
 

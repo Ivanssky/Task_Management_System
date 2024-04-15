@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView
 from .forms import TaskForm
 from .models import Task
+import datetime
 
 
 def create_task(request):
@@ -12,9 +13,11 @@ def create_task(request):
         if form.is_valid():
             task = form.save(commit=False)
             task.user = request.user
+            tag_id = request.POST.get('tags')
+            task.tag_id = tag_id
+            task.created_at = datetime.datetime.now()
             task.save()
             return redirect('tasks')
-
     else:
         form = TaskForm()
     return render(request, 'tasks/create_task.html', {'form': form})
@@ -51,12 +54,21 @@ class TaskUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         task = self.get_object()
         return self.request.user == task.user or self.request.user.is_staff
 
+    def form_valid(self, form):
+        task = form.save(commit=False)
+        tag_id = self.request.POST.get('tags')
+        #task.tag_id = tag_id
+        task.save()
+        return super().form_valid(form)
+
+
 def mark_as_completed(request, task_id):
     current_page = request.META.get('HTTP_REFERER')
     task = get_object_or_404(Task, pk=task_id)
     task.completed = True
     task.save()
     return redirect(current_page)
+
 
 def restore_task(request, task_id):
     current_page = request.META.get('HTTP_REFERER')
@@ -65,10 +77,12 @@ def restore_task(request, task_id):
     task.save()
     return redirect(current_page)
 
+
 def delete_task(request, task_id):
     task = get_object_or_404(Task, pk=task_id)
     task.delete()
     return redirect('completed tasks')
+
 
 class CompletedTaskView(ListView):
     model = Task

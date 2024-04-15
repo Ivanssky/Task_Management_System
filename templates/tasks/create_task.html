@@ -4,14 +4,21 @@
     <h1 class="text-center">Create Task</h1>
 <div class="container ">
     <div class="row justify-content-center">
-        <div class="col-md-4 card border-2 border-dark">
-            <form class = 'text-center' method="post" autocomplete="off" action="{% url "create task" %}" enctype="multipart/form-data" style="margin-bottom: 10px;">
+        <div class="col-md-4 card border-2 border-dark" style="margin-bottom: 10px">
+            <form class='text-center' method="post" autocomplete="off" action="{% url "create task" %}" enctype="multipart/form-data" style="margin-bottom: 10px;">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-outline-dark"  type ='submit'>Create</button>
-                <a class="btn btn-outline-dark"  href="{% url 'home' %}">Cancel</a>
+                <div class="form-group" style="margin-bottom: 10px">
+                    <label for="id_tags">Tags:</label>
+                    <select class="form-control" id="id_tags" name="tags">
+                        <option value="1">Home</option>
+                        <option value="2">Work</option>
+                        <option value="3">Other</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline-dark" type ='submit'>Create</button>
+                <a class="btn btn-outline-dark" href="{% url 'home' %}">Cancel</a>
             </form>
-
         </div>
     </div>
 </div>

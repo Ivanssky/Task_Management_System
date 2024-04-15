@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'task_management_system.project',
     'task_management_system.recurrence',
     'task_management_system.user',
-    'task_management_system.comment',
+    'task_management_system.contacts',
 
     'crispy_forms',
     'crispy_bootstrap5'
@@ -93,9 +93,9 @@ WSGI_APPLICATION = 'task_management_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Taskify',
-        'USER': 'Taskify',
-        'PASSWORD': 'taskify',
+        'NAME': 'appdb',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
     }
 }
 
@@ -134,7 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'task_management_system/static')]
 

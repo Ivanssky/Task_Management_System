@@ -6,10 +6,12 @@
   <a class="btn btn-outline-dark" href="{% url 'tasks' %}">My Tasks</a>
   <a class="btn btn-outline-dark" href="{% url 'completed tasks' %}">Completed Tasks</a>
 </div>
-
+    {% if request.user.is_staff %}
+        <h2>Hi</h2>
+        {% endif %}
 <div style="text-align:center; margin-top: 50px;" class ='container row'>
     {% if last_3_tasks|length > 0 %}
-    <h2>Recent Tasks:</h2>
+    <h2>Recent Tasks</h2>
 {% endif %}
     {% for task in last_3_tasks %}
 
@@ -20,7 +22,7 @@
                 <div class="card-body">
                     <div class="mt-3">
                         <h3 class="card-title text-center">{{ task.title }}</h3>
-                        <p class="card-text text-center">Description: {{ task.description|truncatechars:100}}</p>
+                        <p class="card-text text-center">{{ task.tag}}</p>
                         <a class="btn btn-outline-dark w-100" style="margin-bottom: 10px;" href="{% url 'edit task' pk=task.pk %}">Edit</a>
                          <form action="{% url 'complete task' task.id %}" method="post">
                             {% csrf_token %}
