@@ -104,7 +104,14 @@ class UserDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     template_name = 'users/delete_profile.html'
 
     def test_func(self):
-        return self.request.user.is_staff or self.request.user.pk == self.kwargs.get('pk')
+        user_to_delete = self.get_object()
+        if self.request.user.is_superuser:
+            return True
+        elif self.request.user.is_staff and not user_to_delete.is_staff:
+            return True
+        elif self.request.user.pk == self.kwargs.get('pk'):
+            return True
+        return False
 
 
 

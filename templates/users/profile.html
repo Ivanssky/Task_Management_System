@@ -50,6 +50,15 @@
                                 </div>
                             </div>
                         {% endif %}
+                        {% if current_user.pk != current_profile.pk %}
+                        {% if current_user.is_staff and not current_profile.is_staff or current_user.is_superuser %}
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <a class="btn btn-outline-danger w-100" href="{% url 'delete profile' pk=current_profile.pk %}">Delete Profile</a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
                     </div>
                 </div>
             </div>

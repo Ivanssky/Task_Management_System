@@ -5,37 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6e2627b-fb49-4765-bd2b-0c389a50c8d6" name="Changes" comment="Stuff">
-      <change afterPath="$PROJECT_DIR$/task_management_system/priority/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/priority/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/static/css/sort.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/task/migrations/0002_task_priority.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_management_system/task/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/task_management_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/task_management_system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/recurrence/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/recurrence/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/recurrence/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/recurrence/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/recurrence/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/recurrence/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/recurrence/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/tag/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/tag/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/tag/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/tag/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/tag/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/tag/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/task/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/task/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/task/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/task/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/task/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/task/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/priority/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/tag/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/tag/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/task/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/task/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_management_system/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/create_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/create_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/edit_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/edit_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/my_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/my_tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/user_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/user_tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_management_system/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/delete_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/delete_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +146,7 @@
       <workItem from="1713107101001" duration="377000" />
       <workItem from="1713107485664" duration="7315000" />
       <workItem from="1713202623325" duration="12340000" />
+      <workItem from="1713366324207" duration="3031000" />
     </task>
     <servers />
   </component>
