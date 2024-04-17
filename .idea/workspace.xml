@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d6e2627b-fb49-4765-bd2b-0c389a50c8d6" name="Changes" comment="Stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/priority/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/priority/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/tag/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/tag/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/task/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/task/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_management_system/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_management_system/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/delete_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/delete_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -146,7 +139,7 @@
       <workItem from="1713107101001" duration="377000" />
       <workItem from="1713107485664" duration="7315000" />
       <workItem from="1713202623325" duration="12340000" />
-      <workItem from="1713366324207" duration="3031000" />
+      <workItem from="1713366324207" duration="4420000" />
     </task>
     <servers />
   </component>
